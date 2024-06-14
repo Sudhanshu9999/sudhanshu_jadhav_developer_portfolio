@@ -1,4 +1,17 @@
 /* Base styling */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 .page-container {
     display: flex;
     flex-direction: column;
@@ -7,9 +20,9 @@
     color: #333;
     background-color: #f4f4f4;
     min-height: 100vh;
-  }
-  
-  .hero-section {
+}
+
+.hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,74 +32,163 @@
     color: white;
     text-align: center;
     width: 100%;
-  }
-  
-  .heading {
+    animation: fadeIn 1.5s ease-out;
+    /* Apply the fade-in effect to the hero section */
+}
+
+.heading,
+.sub-heading,
+.intro-section,
+.card {
+    animation: fadeIn 2s ease-out;
+    /* Apply the fade-in effect to other key elements */
+}
+
+
+.heading {
     font-size: 3rem;
-  }
-  
-  .sub-heading {
+    animation-delay: 0.5s;
+    /* Start this animation after 0.5 seconds */
+}
+
+.sub-heading {
     font-weight: 400;
     font-size: 1.8rem;
-  }
-  
-  .intro-section {
+    animation-delay: 1s;
+    /* Start this animation after 1 second */
+}
+
+.intro-section {
     margin-top: -50px;
     background: white;
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 80%;
     text-align: center;
-  }
-  
-  .button {
+    animation-delay: 1.5s;
+    /* Start this animation after 1.5 seconds */
+}
+
+
+.button {
     padding: 10px 20px;
     background-color: #2575fc;
     color: white;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #195ac7;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
     .hero-section {
-      height: 50vh;
+        height: 50vh;
     }
-  
+
     .heading {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     .sub-heading {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-  
+
     .intro-section {
-      width: 95%;
+        width: 95%;
     }
-  }
-  
-  @media (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
     .hero-section {
-      height: 60vh;
+        height: 60vh;
     }
-  
+
     .heading {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
-  
+
     .sub-heading {
-      font-size: 1.7rem;
+        font-size: 1.7rem;
     }
-  
+
     .intro-section {
-      width: 80%;
+        width: 80%;
     }
-  }
-  
+}
+
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Card css */
+* {
+    box-sizing: border-box;
+    /* Apply box-sizing border-box globally */
+}
+
+.home-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    /* Add padding if needed, adjust according to your layout */
+}
+
+.card {
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    /* Ensure margin does not cause overflow, center align the card */
+    padding: 20px;
+    width: calc(100% - 40px);
+    /* Adjust width to account for padding if not using border-box */
+}
+
+.card h2 {
+    color: #333;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.education-section,
+.experience-section,
+.project-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.education-section img,
+.experience-section img,
+.project-section img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.education-section img:hover,
+.experience-section img:hover,
+.project-section img:hover {
+    transform: scale(1.1);
+}
+
+.card p {
+    color: #666;
+    font-size: 16px;
+    flex: 1;
+    /* Allows text to fill the remaining space */
+}
