@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMenu } from '../ContextAPI/MenuContext';
+import DarkLightModeToggle from "./DarkLightModeToggle";
 import './Navigation.css';
 
 const Navigation: React.FC = () => {
@@ -11,13 +12,19 @@ const Navigation: React.FC = () => {
       <nav className="navbar-container">
         <div className="logo">MyPortfolio</div>
         <div className="nav-items">
+          <DarkLightModeToggle />
           <Link to="/" className="nav-item">Home</Link>
           <Link to="/about" className="nav-item">About</Link>
           <Link to="/projects" className="nav-item">Projects</Link>
           <Link to="/contact" className="nav-item">Contact</Link>
         </div>
         <div className="mobile-icon" onClick={toggleMenu}>
-          &#9776;
+          <div>
+            <DarkLightModeToggle />
+          </div>
+          <div>
+            &#9776;
+          </div>
         </div>
       </nav>
       <div className={`side-menu ${isMenuOpen ? 'open' : ''}`}>
