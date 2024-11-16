@@ -18,11 +18,11 @@ const Navigation: React.FC = () => {
           <Link to="/projects" className="nav-item">Projects</Link>
           <Link to="/contact" className="nav-item">Contact</Link>
         </div>
-        <div className="mobile-icon" onClick={toggleMenu}>
+        <div className="mobile-icon">
           <div>
             <DarkLightModeToggle />
           </div>
-          <div>
+          <div onClick={toggleMenu} style={{ 'paddingLeft': '10px' }}>
             &#9776;
           </div>
         </div>
