@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useMenu } from '../ContextAPI/MenuContext';
-import DarkLightModeToggle from "./DarkLightModeToggle";
+import { useMenu } from '../../ContextAPI/MenuContext';
+import DarkLightModeToggle from "../DarkLightModeToggle/DarkLightModeToggle";
 import './Navigation.css';
 
 const Navigation: React.FC = () => {
@@ -10,10 +10,9 @@ const Navigation: React.FC = () => {
   return (
     <>
       <nav className="navbar-container">
-        <div className="logo">MyPortfolio</div>
+        <Link to="/" className="logo nav-item">Sudhanshu Jadhav</Link>
         <div className="nav-items">
           <DarkLightModeToggle />
-          <Link to="/" className="nav-item">Home</Link>
           <Link to="/about" className="nav-item">About</Link>
           <Link to="/projects" className="nav-item">Projects</Link>
           <Link to="/contact" className="nav-item">Contact</Link>
@@ -29,7 +28,7 @@ const Navigation: React.FC = () => {
       </nav>
       <div className={`side-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="close-icon" onClick={toggleMenu}>&times;</div>
-        <Link to="/" className="nav-item" onClick={toggleMenu}>Home</Link>
+        {/* <Link to="/" className="nav-item" onClick={toggleMenu}>Home</Link> */}
         <Link to="/about" className="nav-item" onClick={toggleMenu}>About</Link>
         <Link to="/projects" className="nav-item" onClick={toggleMenu}>Projects</Link>
         <Link to="/contact" className="nav-item" onClick={toggleMenu}>Contact</Link>
