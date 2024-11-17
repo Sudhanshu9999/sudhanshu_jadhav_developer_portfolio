@@ -1,0 +1,100 @@
+/* Toggle container */
+.toggle-container {
+    align-content: center;
+    z-index: 1000;
+  }
+  
+  /* The button itself */
+  .toggle-button {
+    width: 68px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: #2575fc; /* Light mode background */
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .toggle-button.dark {
+    background-color: grey;
+  }
+  
+  /* Icon container (used to show icons left/right) */
+  .icon-container {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Sun icon (visible when light mode) */
+  .sun-container {
+    right: 5px;  /* Move to the right side of the toggle button */
+  }
+  
+  .moon-container {
+    left: 5px;  /* Move to the left side of the toggle button */
+  }
+  
+  /* Sun icon (visible when light mode) */
+  .sun {
+    color: yellow;
+  }
+  
+  /* Moon icon (visible when dark mode) */
+  .moon {
+    color: white;
+  }
+  
+  /* Move the toggle ball to the right or left */
+  .toggle-ball {
+    width: 27px;
+    height: 27px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+  }
+  
+  /* Move the ball to the right when dark mode is active */
+  .move-right {
+    left: calc(100% - 35px); /* Move the ball to the right */
+  }
+  
+  /* Move the ball to the left when light mode is active */
+  .move-left {
+    left: 5px; /* Move the ball to the left */
+  }
+  
+  /* Show icons depending on dark/light mode */
+  .icon-container.visible {
+    opacity: 1;
+  }
+  
+  .icon-container {
+    opacity: 0;
+  }
+  
+  /* Apply Dark Mode styles to the body */
+  body.dark-mode {
+    background-color: #121212; /* Dark background for dark mode */
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Light mode background */
+  body {
+    background-color: #f4f4f4; /* Light background for light mode */
+    transition: all 0.3s ease;
+  }
+  

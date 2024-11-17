@@ -2,3 +2,9 @@
 .content-container {
   padding-top: 60px;
 }
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+  transition: all 0.3s ease;
+}

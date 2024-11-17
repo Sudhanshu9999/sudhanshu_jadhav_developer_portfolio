@@ -4,9 +4,11 @@ import { MenuProvider } from './ContextAPI/MenuContext';
 
 const App: React.FC = () => {
   return (
+    <div className="content">
     <MenuProvider>
       <RoutePage />
     </MenuProvider>
+    </div>
   );
 };
 

@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useMenu } from '../ContextAPI/MenuContext';
-import Navigation from './Navigation';
+import Navigation from './Navigation/Navigation';
+import Footer from './Footer/Footer';
 import HomePage from '../Pages/HomePage/HomePage';
 import AboutPage from '../Pages/AboutPage/AboutPage';
 import ProjectsPage from '../Pages/ProjectsPage/ProjectsPage';
-import './Navigation.css';
+import ArrowTracker from './ArrowTracker/ArrowTracker';
+import './Navigation/Navigation.css';
 
 const RoutePage: React.FC = () => {
 
@@ -13,6 +15,7 @@ const RoutePage: React.FC = () => {
 
   return (
     <Router>
+      <ArrowTracker/>
       <Navigation />
       <div className='content-container'>
         <div className={`main-content ${isMenuOpen ? 'blur-background' : ''}`}>
@@ -23,6 +26,7 @@ const RoutePage: React.FC = () => {
           </Routes>
         </div>
       </div>
+      <Footer />
     </Router>
   );
 };
