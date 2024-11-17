@@ -31,12 +31,17 @@ const SkillsetCard: React.FC = () => {
       ];
 
       return(
+        <div className='skill-container'>
+        <h2>Skillsets</h2>
         <div className="skill-cloud">
+          
         {skills.map(skill => (
           <span key={skill.name} className={`skill ${skill.weight}`}>{skill.name}</span>
         ))}
       </div>
+      </div>
       )
+      
 } 
 
 export default SkillsetCard;

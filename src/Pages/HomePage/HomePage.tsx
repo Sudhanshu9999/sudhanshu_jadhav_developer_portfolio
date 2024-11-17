@@ -6,28 +6,28 @@ import ExperienceCard from './Cards/ExperienceCard';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
-  
+
   useEffect(() => {
     const cards = document.querySelectorAll('.card');
-    const skillCloud = document.querySelector('.skill-cloud'); 
+    const skillCloud = document.querySelector('.skill-cloud');
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in-view'); 
-          observer.unobserve(entry.target); 
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
         }
       });
     }, {
       threshold: 0.25 // Trigger when 25% of the element is in the viewport
     });
 
-    
+
     cards.forEach(card => {
       observer.observe(card);
     });
 
-   
+
     if (skillCloud) {
       observer.observe(skillCloud);
     }
@@ -52,15 +52,11 @@ const HomePage: React.FC = () => {
         <a href="/projects" className="button">View My Work</a>
       </div>
 
-      <div className='skill-container'>
       <SkillsetCard />
-      </div>
-
-      <div className="card-container">
-        <EducationCard />
-        <ExperienceCard />
-        {/* <ProjectsCard /> */}
-      </div>
+      <EducationCard />
+      <ExperienceCard />
+      {/* <ProjectsCard /> */}
+      
     </div>
   );
 };

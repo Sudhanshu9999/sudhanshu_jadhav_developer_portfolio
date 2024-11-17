@@ -12,6 +12,7 @@
     box-sizing: border-box;
     opacity: 0.85;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+    z-index: 1000;
 }
 
 /* Dark Mode - Apply dark background */
@@ -41,6 +42,10 @@ body.dark-mode .nav-item {
 
 .nav-item:hover {
     color: #4f48e4;
+}
+
+body.dark-mode .nav-item:hover {
+    color: #2f6ef9;
 }
 
 /* Mobile Icon */
