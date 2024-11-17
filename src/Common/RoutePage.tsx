@@ -7,6 +7,7 @@ import HomePage from '../Pages/HomePage/HomePage';
 import AboutPage from '../Pages/AboutPage/AboutPage';
 import ProjectsPage from '../Pages/ProjectsPage/ProjectsPage';
 import ArrowTracker from './ArrowTracker/ArrowTracker';
+import FloatingContactButton from './FloatingContactButton/FloatingContactButton';
 import './Navigation/Navigation.css';
 
 const RoutePage: React.FC = () => {
@@ -16,6 +17,7 @@ const RoutePage: React.FC = () => {
   return (
     <Router>
       <ArrowTracker/>
+      <FloatingContactButton/>
       <Navigation />
       <div className='content-container'>
         <div className={`main-content ${isMenuOpen ? 'blur-background' : ''}`}>
