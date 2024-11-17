@@ -51,7 +51,7 @@ const AboutPage: React.FC = () => {
 
       {/* Skills Section */}
       <section className="skills-section fadeIn" ref={(el) => (fadeInRef.current[1] = el as HTMLDivElement)}>
-        <h2>My Skills</h2>
+        <h2>Top Skills</h2>
         <div className="skills-container">
           <div className="skill-card">
             <FaReact />

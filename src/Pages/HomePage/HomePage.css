@@ -9,6 +9,33 @@
       transform: translate3d(0, 0, 0);
     }
   }
+
+  /* Typewriter Animation */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Apply the typewriter animation to the hero section heading */
+.hero-section .heading {
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0; /* Start with width 0 to animate */
+  border-right: 4px solid #2575fc; /* Create the cursor effect */
+  animation: typewriter 3s steps(30) 1s 1 normal both, blink 0.7s step-end infinite;
+}
+
   
   .page-container {
     display: flex;
@@ -59,6 +86,10 @@
     width: 80%;
     text-align: center;
     /* animation-delay: 1.5s; */
+  }
+
+  .intro-section p {
+    margin-bottom: 30px;
   }
   
   .button {
@@ -235,7 +266,6 @@
   @media (max-width: 768px) {
     .intro-section {
       margin-top: -150px;
-      width: 60%;
     }
   
     .heading {
