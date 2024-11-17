@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import SkillsetCard from './Cards/SkillsetCard';
 import EducationCard from './Cards/EducationCard';
 import ExperienceCard from './Cards/ExperienceCard';
-// import ProjectsCard from './Cards/ProjectsCard';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {

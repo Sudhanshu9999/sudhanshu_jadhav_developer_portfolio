@@ -1,0 +1,194 @@
+/* AboutPage Specific Styles */
+
+/* About Page Container */
+.about-page-container {
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+  }
+  
+  /* Dark Mode for AboutPage */
+  body.dark-mode .about-page-container {
+    background-color: black; /* Dark background */
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .about-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Dark Mode for Hero Section */
+  body.dark-mode .about-hero-section {
+    background: linear-gradient(to right, #1f1f1f 0%, #444444 100%); /* Dark gradient */
+  }
+  
+  .about-hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-hero-text p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Dark Mode for About Section */
+  body.dark-mode .about-section {
+    background: #3c3f47;  /* Dark background for About section */
+    color: #ccc;  /* Light text color */
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2575fc;
+  }
+  
+  .about-section p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    padding: 40px;
+    background: white;
+    margin: 40px 0;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Dark Mode for Skills Section */
+  body.dark-mode .skills-section {
+    background: black; /* Dark background for Skills section */
+    color: #ccc; /* Light text color */
+  }
+  
+  .skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2575fc;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .skill-card {
+    margin: 15px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Dark Mode for Skill Cards */
+  body.dark-mode .skill-card {
+    background: #4c4f56; /* Dark background for skill cards */
+    color: #fff; /* Light text on dark background */
+  }
+  
+  .skill-card h3 {
+    font-size: 1.5rem;
+    color: #2575fc;
+  }
+  
+  .skill-card p {
+    color: #ccc;
+    font-size: 1rem;
+  }
+  
+  /* Achievements Section */
+  .achievements-section {
+    padding: 40px;
+    background: white;
+    margin: 40px 0;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Dark Mode for Achievements Section */
+  body.dark-mode .achievements-section {
+    background: black; /* Dark background for Achievements section */
+    color: #ccc; /* Light text color */
+  }
+  
+  .achievements-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2575fc;
+  }
+  
+  .achievements-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .achievements-section li {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .about-page-container {
+      padding: 20px;
+    }
+  
+    .about-section h2 {
+      justify-self: center;
+    }
+  
+    .skills-section h2 {
+      justify-self: center;
+    }
+  
+    .achievements-section h2 {
+      justify-self: center;
+    }
+  
+    .about-hero-section {
+      height: 40vh;
+    }
+  
+    .about-section,
+    .skills-section,
+    .achievements-section {
+      margin: 20px 0;
+      padding: 20px;
+    }
+  
+    .skill-card {
+      width: 100%;
+    }
+  }
+  
