@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css'; // Import the CSS for styling
 
 const Footer: React.FC = () => {
@@ -8,23 +9,23 @@ const Footer: React.FC = () => {
         {/* Links Section */}
         <div className="footer-links">
           <ul>
-            <li><a href="/about">About Me</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
+          <li><Link to="/" className="nav-item">Home</Link></li>
+            <li><Link to="/about" className="nav-item">About Me</Link></li>
+            <li><Link to="/projects" className="nav-item">Projects</Link></li>
           </ul>
         </div>
 
         {/* Social Media Icons */}
         <div className="footer-social">
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/sudhanshu-jadhav/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Sudhanshu9999" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i>
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-twitter"></i>
-          </a>
+          </a> */}
         </div>
       </div>
 

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SkillsetCard from './Cards/SkillsetCard';
 import EducationCard from './Cards/EducationCard';
 import ExperienceCard from './Cards/ExperienceCard';
@@ -48,7 +49,7 @@ const HomePage: React.FC = () => {
       </div>
       <div className="intro-section">
         <p>Hello, I'm Sudhanshu! I'm a software developer specializing in front-end technologies like React and TypeScript. Here, you'll find a selection of the projects that I've worked on and more about my journey in tech.</p>
-        <a href="/projects" className="button">View My Work</a>
+        <Link to="/projects" className="button">View My Work</Link>
       </div>
 
       <SkillsetCard />
