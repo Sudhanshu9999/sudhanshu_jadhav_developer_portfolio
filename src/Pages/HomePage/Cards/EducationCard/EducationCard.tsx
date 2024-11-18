@@ -1,7 +1,8 @@
 import React from "react";
-import UTACampus from '../../../Images/UTA_campus.jpeg';
-import UMCampus from '../../../Images/Um_campus.jpg';
-import GradCap from '../../../Images/GradCap.png';
+import UTACampus from '../../../../Images/UTA_campus.jpeg';
+import UMCampus from '../../../../Images/Um_campus.jpg';
+import GradCap from '../../../../Images/GradCap.png';
+import './EducationCard.css';
 
 const EducationCard: React.FC = () => {
 

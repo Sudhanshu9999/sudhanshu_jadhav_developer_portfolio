@@ -1,4 +1,5 @@
 import React from "react";
+import './SkillsetCard.css';
 
 const SkillsetCard: React.FC = () => {
 

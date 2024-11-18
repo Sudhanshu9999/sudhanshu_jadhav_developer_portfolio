@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SkillsetCard from './Cards/SkillsetCard';
-import EducationCard from './Cards/EducationCard';
-import ExperienceCard from './Cards/ExperienceCard';
+import SkillsetCard from './Cards/SkillsetCard/SkillsetCard';
+import EducationCard from './Cards/EducationCard/EducationCard';
+import ExperienceCard from './Cards/ExperienceCard/ExperienceCard';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {

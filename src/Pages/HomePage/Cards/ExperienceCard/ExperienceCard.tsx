@@ -1,7 +1,7 @@
 import React from "react";
-import Retailimg from '../../../Images/RelianceRetail .jpeg';
-import JioImg from '../../../Images/Reliance-Jio-.jpg';
-import Dev1 from '../../../Images/Dev1.png';
+import Retailimg from '../../../../Images/RelianceRetail .jpeg';
+import JioImg from '../../../../Images/Reliance-Jio-.jpg';
+import Dev1 from '../../../../Images/Dev1.png';
 
 const ExperienceCard: React.FC = () => {
   return (
