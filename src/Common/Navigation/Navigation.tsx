@@ -13,6 +13,7 @@ const Navigation: React.FC = () => {
         <Link to="/" className="logo nav-item">Sudhanshu Jadhav</Link>
         <div className="nav-items">
           <DarkLightModeToggle />
+          <a href="/Files/SDE - Sudhanshu Jadhav.pdf" download className="nav-item">Résumé</a>
           <Link to="/about" className="nav-item">About</Link>
           <Link to="/projects" className="nav-item">Projects</Link>
           {/* <Link to="/contact" className="nav-item">Contact</Link> */}
