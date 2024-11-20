@@ -81,7 +81,7 @@
 }
 
 .intro-section {
-  margin-top: -50px;
+  margin-top: -80px;
   background: white;
   padding: 50px;
   border-radius: 8px;
@@ -93,6 +93,8 @@
 
 .intro-section p {
   margin-bottom: 30px;
+  font-weight: 500;
+  font-size: larger;
 }
 
 .button {
@@ -203,6 +205,10 @@ hr {
     margin-top: -150px;
   }
 
+  .intro-section p {
+    font-size: medium;
+  }
+
   .hero-section .heading {
     font-size: xx-large;
   }
@@ -236,6 +242,14 @@ hr {
   .project-section {
     flex-direction: column;
   }
+}
+
+@media (max-width: 410px) {
+
+  .hero-section .heading {
+    font-size: x-large;
+  }
+
 }
 
 
