@@ -76,7 +76,7 @@
   z-index: 0;
   transform-origin: center center; 
   transform: translate(-50%, -50%) rotate(0deg); 
-  animation: spin 2s linear infinite; 
+  animation: spin 3s linear infinite; 
 }
 
 .hero-section > * {
