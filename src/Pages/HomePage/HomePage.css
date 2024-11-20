@@ -10,7 +10,6 @@
   }
 }
 
-/* Typewriter Animation */
 @keyframes typewriter {
   from {
     width: 0;
@@ -27,13 +26,11 @@
   }
 }
 
-/* Apply the typewriter animation to the hero section heading */
 .hero-section .heading {
   font-size: 3rem;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  /* Start with width 0 to animate */
   border-right: 4px solid #2575fc;
   /* Create the cursor effect */
   animation: typewriter 3s steps(30) 1s 1 normal both, blink 0.7s step-end infinite;
@@ -49,18 +46,54 @@
   min-height: 100vh;
 }
 
+
 .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 74vh;
-  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  width: 100%;
   color: white;
   text-align: center;
-  width: 100%;
   animation: fadeIn 1.5s ease-out;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  position: relative;
 }
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px; 
+  height: 400px; 
+  background-image: url('../../Images/reactLogo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1; 
+  pointer-events: none; /* Ensure it doesn't interfere */
+  z-index: 0;
+  transform-origin: center center; 
+  transform: translate(-50%, -50%) rotate(0deg); 
+  animation: spin 2s linear infinite; 
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Spin animation */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg); 
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg); 
+  }
+}
+
 
 .heading,
 .sub-heading,
@@ -88,6 +121,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 80%;
   text-align: center;
+  z-index: 10;
   /* animation-delay: 1.5s; */
 }
 
@@ -207,6 +241,11 @@ hr {
 
   .intro-section p {
     font-size: medium;
+  }
+
+  .hero-section::before {
+    width: 200px;
+    height: 200px;
   }
 
   .hero-section .heading {
