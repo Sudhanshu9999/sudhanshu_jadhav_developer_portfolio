@@ -1,117 +1,102 @@
 /* Ensure no outline or border is applied */
-.educationCard,
-.universityImage {
-  outline: none;
-  /* Remove outline */
-  border: none;
-  /* Remove any border */
+.experienceCard,
+.companyImage {
+  outline: none; /* Remove outline */
+  border: none; /* Remove any border */
 }
 
-/* Optional: specifically reset focus state borders */
-.educationCard:focus,
-.universityImage:focus {
-  outline: none;
-}
-
-.educationSection {
+/* Section Styling */
+.experienceSection {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
   will-change: opacity, transform;
   background-color: #f4f7fa;
   padding: 60px 20px;
-  /* Increase padding for better section spacing */
   border-radius: 15px;
-  /* Softer corners for the section */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  /* Add a stronger shadow for the section */
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.educationSection.in-view {
+.experienceSection.in-view {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Title Styling */
 .sectionTitle {
   text-align: center;
   font-size: 2.5rem;
-  /* Larger title */
   font-weight: 600;
-  /* Slightly bolder for the title */
   color: #333;
   margin-bottom: 40px;
 }
 
-.educationList {
+/* Grid Layout for Experience Cards */
+.experienceList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* Flexible column sizing */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible column sizing */
   gap: 20px;
   padding: 0;
   justify-items: center;
-  /* Ensures items are centered in their grid cell */
 }
 
-.educationCard {
+/* Card Styling */
+.experienceCard {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  /* Default for mobile */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow around each card */
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.educationCard:hover {
-  transform: translateY(-5px);
-  /* Hover effect for card lift */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  /* Stronger shadow on hover */
+/* Hover effect for card */
+.experienceCard:hover {
+  transform: translateY(-5px); /* Hover effect for card lift */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
+/* Image Styling */
 .imageContainer {
   width: 100%;
   height: 200px;
-  /* Set a fixed height for the image */
   overflow: hidden;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
-.universityImage {
+.companyImage {
   width: 100%;
   height: 100%;
-  /* Make the image fill the container's height */
   object-fit: cover;
-  /* Ensure the image fully covers the container */
 }
 
+/* Card Content Styling */
 .cardContent {
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.degree {
+.jobTitle {
   font-size: 1.5rem;
   font-weight: bold;
   color: #0066cc;
   margin: 0 0 5px;
 }
 
-.institution {
+.companyName {
   font-size: 1.1rem;
   color: #555;
   margin: 0 0 5px;
 }
 
-.year {
+.duration {
   font-size: 1rem;
   color: #777;
   margin: 0 0 10px;
@@ -123,50 +108,43 @@
   line-height: 1.6;
 }
 
-/* Desktop view: Image and content side by side */
+/* Desktop View */
 @media (min-width: 768px) {
-  .educationCard {
-    flex-direction: row;
-    /* Align image and content horizontally */
+  .experienceCard {
+    flex-direction: row; /* Align image and content horizontally */
     justify-content: space-between;
-    /* Space between image and text */
     height: 300px;
-    /* Fixed height for the card on desktop */
   }
 
   .imageContainer {
     height: 100%;
-    /* Fill the entire height */
     width: 40%;
-    /* Image takes 40% of the card width */
   }
 
   .cardContent {
     width: 60%;
-    /* Content takes the remaining 60% */
     padding: 20px;
   }
 }
 
+/* Mobile View */
 @media (max-width: 768px) {
-  .educationCard {
+  .experienceCard {
     flex-direction: column;
-    /* Stack the image and content vertically */
     height: auto;
-    /* Allow the card to adjust height on mobile */
   }
 
   .imageContainer {
     height: 200px;
-    /* Maintain a consistent image height */
   }
 }
 
-body.dark-mode .educationSection {
+
+body.dark-mode .experienceSection {
   background-color: #333333;
 }
 
-body.dark-mode .educationCard {
+body.dark-mode .experienceCard {
   background-color: black;
 }
 
