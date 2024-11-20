@@ -29,7 +29,8 @@ const Navigation: React.FC = () => {
       </nav>
       <div className={`side-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="close-icon" onClick={toggleMenu}>&times;</div>
-        {/* <Link to="/" className="nav-item" onClick={toggleMenu}>Home</Link> */}
+        <a href="/Files/SDE - Sudhanshu Jadhav.pdf" download className="nav-item">Résumé</a>
+        <Link to="/" className="nav-item" onClick={toggleMenu}>Home</Link>
         <Link to="/about" className="nav-item" onClick={toggleMenu}>About</Link>
         <Link to="/projects" className="nav-item" onClick={toggleMenu}>Projects</Link>
         {/* <Link to="/contact" className="nav-item" onClick={toggleMenu}>Contact</Link> */}

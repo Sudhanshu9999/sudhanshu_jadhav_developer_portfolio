@@ -2,8 +2,8 @@ import React from "react";
 import "./EducationCard.css";
 
 // Import the university images
-import UTACampus from "../../../../Images/UTA_campus.jpeg";
-import UMCampus from "../../../../Images/Um_campus.jpg";
+import UTACampus from "../../../../Images/UTAlogo.jpg";
+import UMCampus from "../../../../Images/UMlogo.jpg";
 
 interface EducationCardProps {
   degree: string;
