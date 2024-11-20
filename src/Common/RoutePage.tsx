@@ -8,6 +8,7 @@ import AboutPage from '../Pages/AboutPage/AboutPage';
 import ProjectsPage from '../Pages/ProjectsPage/ProjectsPage';
 import ArrowTracker from './ArrowTracker/ArrowTracker';
 import FloatingContactButton from './FloatingContactButton/FloatingContactButton';
+import ScrollToTop from './ScrollToTop';
 import './Navigation/Navigation.css';
 
 const RoutePage: React.FC = () => {
@@ -18,6 +19,7 @@ const RoutePage: React.FC = () => {
     <Router>
       <ArrowTracker/>
       <FloatingContactButton/>
+      <ScrollToTop />
       <Navigation />
       <div className='content-container'>
         <div className={`main-content ${isMenuOpen ? 'blur-background' : ''}`}>
