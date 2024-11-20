@@ -10,6 +10,8 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     const cards = document.querySelectorAll('.card');
     const skillCloud = document.querySelector('.skill-cloud');
+    const educationSection = document.querySelector('.educationSection');
+    const experienceSection = document.querySelector('.experienceSection');
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -32,10 +34,24 @@ const HomePage: React.FC = () => {
       observer.observe(skillCloud);
     }
 
+    if (educationSection) {
+      observer.observe(educationSection);
+    }
+
+    if (experienceSection) {
+      observer.observe(experienceSection);
+    }
+
     return () => {
       cards.forEach(card => observer.unobserve(card));
       if (skillCloud) {
         observer.unobserve(skillCloud);
+      }
+      if (educationSection) {
+        observer.unobserve(educationSection);
+      }
+      if (experienceSection) {
+        observer.unobserve(experienceSection);
       }
     };
   }, []);

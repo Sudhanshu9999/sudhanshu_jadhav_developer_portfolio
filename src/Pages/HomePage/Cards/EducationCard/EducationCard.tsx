@@ -1,45 +1,76 @@
 import React from "react";
-import UTACampus from '../../../../Images/UTA_campus.jpeg';
-import UMCampus from '../../../../Images/Um_campus.jpg';
-import GradCap from '../../../../Images/GradCap.png';
-import './EducationCard.css';
+import "./EducationCard.css";
 
-const EducationCard: React.FC = () => {
+// Import the university images
+import UTACampus from "../../../../Images/UTAlogo.jpg";
+import UMCampus from "../../../../Images/UMlogo.jpg";
 
-  return (
-    <div className="card-container">
-      <div className='card'>
-        <img className='card-img' src={GradCap} alt='GradCap' />
-      </div>
-      <div className="card">
-        <h2>Education</h2>
-        <div className="education-section">
-          <div>
-            <img src={UTACampus} alt="UTA Campus" />
-          </div>
-          <div>
-            <p>Master of Science in Information Systems</p>
-            <p>University of Texas at Arlington, USA</p>
-            <p>June 2023 - December 2024</p>
-            <p>GPA - 3.8</p>
-          </div>
-        </div>
-        <hr />
-        <div className="education-section">
-          <div>
-            <img src={UMCampus} alt="Graduation" />
-          </div>
-          <div>
-            <p>Bachelor of Engineering in Electronics</p>
-            <p>University of Mumbai, India</p>
-            <p>June 2015 - May 2019</p>
-            <p>CGPA - 8.16/10</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-
+interface EducationCardProps {
+  degree: string;
+  institution: string;
+  year: string;
+  description: string;
+  image: string; // To handle dynamic image per card
 }
 
-export default EducationCard;
+const EducationCard: React.FC<EducationCardProps> = ({
+  degree,
+  institution,
+  year,
+  description,
+  image,
+}) => {
+  return (
+    <div className="educationCard">
+      <div className="imageContainer">
+        <img src={image} alt={`${institution} campus`} className="universityImage" />
+      </div>
+      <div className="cardContent">
+        <h3 className="degree">{degree}</h3>
+        <p className="institution">{institution}</p>
+        <p className="year">{year}</p>
+        <p className="description">{description}</p>
+      </div>
+    </div>
+  );
+};
+
+const Education: React.FC = () => {
+
+  const educationData = [
+    {
+      degree: "Master of Science in Information Systems",
+      institution: "University of Texas at Arlington, USA",
+      year: "June 2023 - December 2024",
+      description: "Specializing in software development, algorithms, and data analytics.",
+      image: UTACampus, // Image for University of Miami
+    },
+    {
+      degree: "Bachelor of Engineering in Electronics",
+      institution: "University of Mumbai, India",
+      year: "June 2015 - May 2019",
+      description: "Focused on computer networking,  object oriented programming and software development.",
+      image: UMCampus, // Image for University of Texas Arlington
+    },
+  ];
+
+  return (
+    <section className="educationSection">
+      <h2 className="sectionTitle">Education</h2>
+      <div className="educationList">
+        {educationData.map((edu, index) => (
+          <EducationCard
+            key={index}
+            degree={edu.degree}
+            institution={edu.institution}
+            year={edu.year}
+            description={edu.description}
+            image={edu.image}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Education;
