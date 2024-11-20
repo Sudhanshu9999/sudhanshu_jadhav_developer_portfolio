@@ -41,14 +41,14 @@ const Experience: React.FC = () => {
       jobTitle: "Senior Software Developer",
       companyName: "Jio Platforms Ltd",
       duration: "January 2021 - May 2023",
-      description: "Managing daily retail operations and improving customer engagement.",
+      description: "Designed and developed scalable systems, ensuring performance optimization and security for user-focused applications in high-impact environments.",
       image: JioImg, // Image for Reliance Retail
     },
     {
       jobTitle: "Software Developer",
       companyName: "Reliance Retail & Telecom Systems Ltd",
       duration: "September 2019 - Dec 2020",
-      description: "Worked on network installations and troubleshooting for Jio's 4G services.",
+      description: "Created responsive web solutions and streamlined workflows, enhancing usability and operational efficiency for large-scale platforms.",
       image: Retailimg, // Image for Reliance Jio
     },
   ];
