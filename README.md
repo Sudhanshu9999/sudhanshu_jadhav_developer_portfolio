@@ -1,46 +1,138 @@
-# Getting Started with Create React App
+# Sudhanshu Jadhav - Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the official portfolio website of **Sudhanshu Jadhav**, a passionate software developer with expertise in building modern, responsive web applications. This portfolio showcases my technical skills, projects, and accomplishments. The website is built using **React.js**, **TypeScript**, **HTML**, and **CSS**, and is optimized for both performance and user experience.
 
-## Available Scripts
+## 🌐 Live Website
 
-In the project directory, you can run:
+You can view my portfolio live at:  
+[**sudhanshujadhav.com**](https://sudhanshujadhav.com)
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [About Me](#about-me)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Installation](#installation)
+- [Folder Structure](#folder-structure)
+- [Deployment](#deployment)
+- [License](#license)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About Me
 
-### `npm test`
+I am a **Software Developer** with experience in **React.js**, **TypeScript**, and a variety of web technologies. I focus on creating seamless and engaging user interfaces and have a passion for developing solutions that solve real-world problems. This portfolio is a reflection of my work and the skills I have acquired throughout my career.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+This portfolio was built with the following technologies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend:**
+  - React.js
+  - TypeScript
+  - HTML5
+  - CSS3
+  - Tailwind CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Deployment:**
+  - AWS S3 for static web hosting
+  - Amazon CloudFront for content delivery
+  - SSL Certificate for secure hosting
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- **Responsive Design:** The portfolio is designed to work seamlessly across different screen sizes, ensuring an optimal viewing experience on mobile, tablet, and desktop devices.
+- **Dark Mode:** Users can switch between dark and light themes according to their preferences.
+- **SEO Optimized:** The site is structured with proper meta tags and semantic HTML to improve search engine ranking.
+- **Performance Optimized:** The website is hosted on **AWS S3** with **Amazon CloudFront** for fast and secure delivery of content.
+- **Clean User Interface:** The design is minimalistic, focusing on content with a smooth user experience.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run this project locally on your machine, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Prerequisites
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Ensure that you have the following installed:
 
-## Learn More
+- **Node.js** (LTS version)
+- **npm** or **yarn**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Steps
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Sudhanshu9999/sudhanshu_jadhav_developer_portfolio.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd sudhanshu_jadhav_developer_portfolio
+   ```
+
+3. Install the dependencies:
+
+   Using npm:
+
+   ```bash
+   npm install
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+4. Start the development server:
+
+   Using npm:
+
+   ```bash
+   npm start
+   ```
+
+   Or using yarn:
+
+   ```bash
+   yarn start
+   ```
+
+   Visit `http://localhost:3000` in your browser to view the project.
+
+## Folder Structure
+
+The folder structure for this project is as follows:
+
+```
+/public                # Contains static assets (images, icons, etc.)
+  /images              # Images for the website
+/src
+  /pages               # React components for different pages (Home, About, Projects, etc.)
+  /styles              # Tailwind CSS and custom styles
+  /components          # Reusable UI components (Header, Footer, etc.)
+  /assets              # Icons, logos, and other assets
+  /utils               # Utility functions (if any)
+README.md              # This file
+package.json           # Project dependencies and configuration
+tailwind.config.js     # Tailwind CSS configuration
+```
+
+## Deployment
+
+This project is deployed on **AWS S3** for static web hosting with **Amazon CloudFront** as the content delivery network (CDN). It ensures fast and secure delivery of the portfolio website across the globe.
+
+### Deployment Steps (for reference)
+
+1. Build the project for production:
+
+   ```bash
+   npm run build
+   ```
+
+2. Deploy the `build` folder to an S3 bucket and configure CloudFront for CDN distribution.
+3. Ensure that the domain is correctly pointed to the CloudFront distribution and SSL is configured for secure browsing.
+
+## License
+
+This project is not currently licensed. Feel free to use it at your own discretion.
